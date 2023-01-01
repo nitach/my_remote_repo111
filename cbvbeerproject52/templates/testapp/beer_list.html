@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<h1>All Beer Informations</h1>
+<table border="4">
+    <thead>
+     <th>Brand</th>
+    <th>Details</th>
+    <th>Update</th>
+    <th>Delete</th>
+    </thead>
+    {%for beer in beer_list%}
+    <tr>
+        <td>{{beer.Brand}}</td>
+        <td><a href="/{{beer.id}}">details</a></td>
+        <td><a href="/update/{{beer.id}}">Update</td>
+        <td><a href="/delete/{{beer.id}}">Delete</a></td>
+
+    </tr>
+
+    {%endfor%}
+
+
+
+
+
+</table><br><br>
+<a href="/create" class="">Insert new brand</a>
+</body>
+</html>
